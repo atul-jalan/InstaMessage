@@ -1,1 +1,0 @@
-TOKEN_SECRET = jfdjaf;ldksajfahoiu3hriune

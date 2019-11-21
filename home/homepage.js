@@ -41,17 +41,15 @@ window.onload = async function(){
 	.catch(() => {
 		window.location.href = "../login/login.html"
 	})
-	.then(response => response.json())
-	.then(response => {
-		if (response.error){
+	.then(function(response){
+		if (response.status == 403){
 			window.location.href = "../login/login.html"
-		} else {
-			successfulStatus();
 		}
-	})
+		successfulStatus()
+	}	
 }
 
-const successfulStatus = () => {
+const successfulStatus = async () => {
 	cssStuff();
 
 	let tempChats = [];

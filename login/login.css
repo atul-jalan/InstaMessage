@@ -1,0 +1,189 @@
+/******************************GLOBAL VARIABLES******************************/
+
+@import url('https://fonts.googleapis.com/css?family=Gayathri:100,700|Nunito:400,600,700&display=swap');
+
+:root {
+	--main-background: #e1e8f0;
+	--dark-blue: #173e43;
+	--light-blue: #3fb0ac;
+	--very-light-blue: #d7f0ef;
+	--light-red: #c76465;
+	--very-light-red: #edcccd;
+	--signup-margin: 25px;
+}
+body {
+	margin: 0 auto;
+}
+.darkBlue {
+	color: var(--dark-blue);
+}
+.lightBlue {
+	color: var(--light-blue);
+}
+.gFont {
+	font-family: 'Gayathri', sans-serif;
+}
+.nFont {
+	font-family: 'Nunito', sans-serif;
+}
+
+/******************************FORMS***************************************/
+/*All forms - inputs and buttons*/
+.allForms {
+	border: none;
+	border-radius: 5px;
+}
+.allForms:focus {
+	outline: none;
+}
+/*Input fields for forms - name, username, password*/
+.allInputForms {
+	padding-left: 3px;
+	padding-top: 2px;
+	border: 2px solid transparent;
+
+}
+.wrongInput {
+	background-color: var(--very-light-red);
+	border-color: var(--light-red);
+}
+.allInputForms:focus {
+	transition: background-color .2s linear, border-color .2s linear;
+	background-color: var(--very-light-blue);
+	border-color: var(--light-blue);
+}
+/*Input field buttons - login and signup*/
+.allButtons {
+	background-color: var(--light-blue);
+	text-align: center;
+	font-weight: 700;
+	color: white;
+}
+.allButtons:hover {
+	transition: background-color .2s linear;
+	background-color: var(--dark-blue);
+}
+.allButtons:active {
+	transition: background-color .2s linear;
+	background-color: var(--dark-blue);
+}
+
+/******************************HEADER***************************************/
+/*General Header Content*/
+#fixedHeader {
+	width: 100%;
+	height: 50px;
+	background-color: var(--main-background);
+	text-align: center;
+}
+#headerContent {
+	width: 1000px;
+	display: inline-block;
+}
+
+/*Website Title*/
+#websiteTitle {
+	margin: 15px 0px;
+	font-size: 25px;
+	font-weight: 700;
+	float: left;
+
+}
+
+/*Login form stuff*/
+#loginForm {
+	float: right;
+}
+
+.loginInputField {
+	height: 25px;
+	width: 100px;
+	margin-top: 9px;
+	margin-right: 2px;
+	font-size: 15px;
+}
+
+#loginButton {
+	height: 33px;
+	width: 70px;
+	font-size: 15px;
+}
+
+/******************************MAIN CONTENT***************************************/
+
+/*stuff for the entire main page*/
+#mainContentWrapper {
+	text-align: center;
+}
+#mainContent {
+	margin-top: 20vh;
+	width: 1000px;
+	display: inline-block;
+}
+
+/*
+Main Text
+*/
+
+#mainInfo {
+	width: 65%;
+	float: left;
+	text-align: left;
+}
+#name {
+	font-size: 95px;
+	margin: 0 auto;
+	padding-bottom: 0px;
+}
+#description {
+	font-size: 38px;
+	padding: 0px;
+	margin: 0px;
+}
+.links {
+	width: 50%;
+	float: left;
+	font-size: 20px;
+}
+a, a:visited { /*So that link doesn't look different from other text*/
+	color: var(--light-blue);
+}
+a:hover {
+	transition: color .2s linear;
+	color: var(--dark-blue);
+}
+
+/*
+New User SignUp
+*/
+
+#newUser {
+	float: right;
+	width: 35%;
+	background-color: var(--main-background);
+	border-radius: 20px;
+	box-shadow: 5px solid var(--main-background);
+}
+
+#signUpText {
+	font-size: 38px;
+	margin-top: var(--signup-margin);
+}
+
+.signUpInputField {
+
+	width: 85%;
+	height: 30px;
+
+	font-size: 17px;
+
+	padding-left: 5px;
+	margin-bottom: 25px;
+}
+
+#signUpButton {
+	height: 36px;
+	width: 88%;
+	font-size: 17px;
+	margin-bottom: var(--signup-margin);
+}

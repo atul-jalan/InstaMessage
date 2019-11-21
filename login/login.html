@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>InstaMessage by Atul Jalan</title>
+		<link rel="stylesheet" href="login.css">
+		<script type="text/javascript" src="login.js"></script>
+	</head>
+
+	<body>
+
+		<div id="fixedHeader">
+		<div id="headerContent">
+
+			<h2 id="websiteTitle" class="gFont darkBlue">InstaMessage by Atul Jalan</h2>
+
+			<form id="loginForm" onsubmit="processLogin(event)">
+				<input type="text" id="userLogin" class="loginInputField nFont allForms allInputForms" placeholder="Username">
+				<input type="password" id="passLogin" class="loginInputField nFont allForms allInputForms" placeholder="Password">
+				<input type="submit" id="loginButton" class="nFont allForms allButtons" value="Login">
+			</form>
+
+		</div>
+		</div>
+
+		<div id="mainContentWrapper">
+		<div id="mainContent">
+
+			<div id="mainInfo">
+				<h1 id="name" class="gFont darkBlue">InstaMessage</h1>
+				<h2 id="description" class="gFont lightBlue">A global instant messenger and chat client programmed and designed by Atul Jalan</h2>
+				<h3 class="links gFont lightBlue"><a href='https://github.com/atul-jalan'>Github</a></h3>
+				<h3 class="links gFont lightBlue"><a href='https://atul-jalan.github.io'>Website</a></h3>
+			</div>
+
+			<div id="newUser">
+
+				<h2 id="signUpText" class="gFont darkBlue">Sign Up</h2>
+
+				<form id="signUpForm" onsubmit="processSignUp(event)">
+					<input type="text" id="nameSignUp" class="signUpInputField allForms allInputForms nFont" placeholder="Name">
+					<input type="text" id="userSignUp" class ="signUpInputField allForms allInputForms nFont" placeholder="Username">
+					<input type="password" id="passSignUp" class ="signUpInputField allForms allInputForms nFont" placeholder="Password">
+					<input type="submit" id="signUpButton" class="nFont allForms allButtons" value="Sign Up">
+				</form>
+
+			</div>
+
+		</div>
+		</div>
+	</body>
+</html>

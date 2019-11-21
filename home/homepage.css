@@ -1,0 +1,384 @@
+/******************************GLOBAL VARIABLES******************************/
+
+@import url('https://fonts.googleapis.com/css?family=Gayathri:100,700|Nunito:300,400,600,700,900&display=swap');
+
+:root {
+	--main-background: #e1e8f0;
+	--dark-blue: #173e43;
+	--light-blue: #3fb0ac;
+	--very-light-blue: #d7f0ef;
+	--super-light-blue: #f1f9f8;
+	--light-gray: #d8d8d8;
+	--side-margin: 15px;
+	--contact-side-margin: 15px;
+}
+body {
+	margin: 0 auto;
+}
+.darkBlue {
+	color: var(--dark-blue);
+}
+.lightBlue {
+	color: var(--light-blue);
+}
+.gFont {
+	font-family: 'Gayathri', sans-serif;
+}
+.nFont {
+	font-family: 'Nunito', sans-serif;
+}
+
+/*All forms - inputs and buttons*/
+.allForms {
+	border: none;
+	border-radius: 5px;
+}
+.allForms:focus {
+	outline: none;
+}
+
+/*All buttons*/
+.allButtons {
+	background-color: var(--light-blue);
+	text-align: center;
+	font-weight: 700;
+	color: white;
+}
+.allButtons:hover {
+	transition: background-color .2s linear;
+	background-color: var(--dark-blue);
+}
+.allButtons:active {
+	transition: background-color .2s linear;
+	background-color: var(--dark-blue);
+}
+
+/******************************FULL PAGE***************************************/
+
+#fullPage {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+/******************************HEADER***************************************/
+/*General Header Content*/
+#fixedHeader {
+	width: 100%;
+	height: 50px;
+	background-color: var(--main-background);
+
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+/*Website Title*/
+#websiteTitle {
+	margin-left: var(--side-margin);
+	font-size: 27px;
+	font-weight: 700;
+	max-height: 50%;
+	flex: 1;
+}
+
+#headerButtons {
+	margin-right: var(--side-margin);
+}
+.headButton {
+	height: 35px;
+	font-size: 15px;
+	min-width: 120px;
+}
+
+/******************************MAIN CONTENT - EVERYTHING BUT HEADER***************************************/
+
+#mainContent {
+	width: 100%;
+	height: calc(100% - 50px);
+	display: flex;
+	flex-direction: row;
+}
+
+.subHeader {
+	width: 100%;
+	height: 70px;
+	border-bottom: 1px solid var(--light-gray);
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+/******************************CONTACTS HEADER***************************************/
+
+#contacts {
+	width: 30%;
+	min-width: 350px;
+	max-width: 400px;
+	height: 100%;
+	border-right: 1px solid var(--light-gray);
+	display: flex;
+	flex-direction: column;
+}
+
+#contactsHeaderTitle {
+	margin: 0px auto;
+	font-size: 30px;
+	margin-left: var(--contact-side-margin);
+}
+
+#newChatButton {
+	font-size: 20px;
+	margin-right: 15px;
+	padding: 7px 10px;
+	border-radius: 80px;
+}
+
+/******************************CONTACTS LIST***************************************/	
+#contactsList {
+	width: 100%;
+	overflow-x: hidden;
+	height: calc(100% - 71px);
+	display: flex;
+	flex-direction: column;
+}
+
+.singleContact {
+	width: 100%;
+	padding: 10px 0px;
+	border-radius: 30px;
+	margin-top: 5px;
+	transition: background-color .2s linear;
+	background-color: white;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.singleContact:hover {
+	transition: background-color .2s linear;
+	background-color: var(--super-light-blue);
+}
+.singleContact:focus {
+	transition: background-color .2s linear;
+	background-color: var(--very-light-blue);
+}
+.selectedContact {
+	transition: background-color .2s linear;
+	background-color: var(--very-light-blue);;
+}
+
+#initialsWrapper{
+	width: 20%;
+}
+.initials {
+	margin: 0px auto;
+	margin-left: var(--contact-side-margin);
+	border-radius: 50px;
+	border: 3px solid var(--light-blue);
+	width: 65%;
+	font-size: 180%;
+}
+
+#singleContactInfo {
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+}
+#topRow {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.contactName {
+	flex: 1;
+	text-align: left;
+	font-size: 23px;
+	margin: 0px auto;
+	padding: 0px auto;
+	font-weight: 600;
+	color: black;
+	margin-bottom: -2px;
+}
+.lastDate {
+	margin: 0px auto;
+	text-align: right;
+	margin-right: var(--contact-side-margin);
+	font-weight: 400;
+}
+.lastChat {
+	width: 100%;
+	margin: 0px auto;
+	color: gray;
+	font-weight: 300;
+	font-size: 15px;
+	text-align: left;
+	margin-top: -2px;
+}
+
+/******************************CHAT***************************************/	
+#chat{
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.initials2 {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: var(--side-margin);
+	border: 3px solid var(--light-blue);
+	border-radius: 50px;
+	width: 50px;
+	height: 50px;
+	font-size: 130%;
+}
+.contactName2 {
+	margin-left: 5px;
+	flex: 1;
+}
+.submitText {
+	height: 50px;
+}
+#submitForm {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+#submittedText {
+	height: 35px;
+	margin-left: 15px;
+	flex: 1;
+	background-color: rgba(216,216,216, 0.5);
+	border-radius: 15px;
+	margin-right: 5px;
+	padding-left: 10px;
+	font-size: 15px;
+}
+#submittedTextButton {
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	margin: 0px auto;
+	padding: 0px;
+	border-radius: 50px;
+	font-size: 25px;
+	font-weight: 900;
+	margin-right: 15px;
+}
+
+/******************************CHAT BOX***************************************/	
+.texts {
+	width: 100%;
+	height: calc(100% - 121px);
+	background-color: white;
+	overflow-x: hidden;
+	padding-bottom: 10px;
+}
+
+.singleText {
+	width: calc(100% - 20px);
+	display: inline-block;
+	margin-top: 2px;
+}
+.left {
+	float: left;
+	text-align: left;
+	margin-left: 15px;
+}
+.right {
+	float: right;
+	text-align: right;
+	margin-right: 15px;
+}
+
+.singleTextInfo {
+	width: 100%;
+	margin: 0px auto;
+	color: gray;
+	margin-top: 5px;
+}
+.leftInfo {
+	margin-left: 8px;
+}
+.rightInfo {
+	margin-left: -8px;
+}
+
+.singleTextContent {
+	margin: 0 auto;
+	max-width: 60%;
+}
+.leftContent {
+	float: left;
+	background-color: var(--light-gray);
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	padding: 2px 8px;
+	margin: 0 auto;
+}
+.rightContent {
+	float: right;
+	text-align: left;
+	background-color: var(--light-blue);
+	color: white;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	padding: 2px 8px;
+}
+
+/******************************NEW CHAT***************************************/	
+
+#createNewChat {
+	visibility: hidden;
+	z-index: 1;
+	position: absolute;
+	width: 30%;
+	max-width: 300px;
+	background-color: var(--main-background);
+	border: 2px solid var(--dark-blue);
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+#creatNewChatText {
+	margin: 0px auto;
+	margin-top: 20px;
+}
+#createNewChatForm {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin: 0px auto;
+}
+#createNewChatInput {
+	width: 90%;
+	height: 40px;
+	margin: 0px auto;
+	border-radius: 5px;	
+	padding: 2px 8px;
+	font-size: 17px;
+}
+#createNewChatButton {
+	width: 95%;
+	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	height: 40px;
+	font-size: 20px;
+}

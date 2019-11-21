@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>InstaMessage by Atul Jalan</title>
+		<link rel="stylesheet" href="homepage.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.dev.js"></script>
+		<script type="text/javascript" src="homepage.js"></script>
+	</head>
+
+	<body>
+	<div id="fullPage">
+
+		<div id="fixedHeader">
+
+			<h2 id="websiteTitle" class="gFont darkBlue">InstaMessage by Atul Jalan</h2>
+
+			<div id="headerButtons">
+				<button id="logoutButton" class="nFont allForms allButtons headButton" onclick="processLogout(event)">Logout</button>
+			</div>
+
+		</div>
+
+		<div id="mainContent">
+
+			<div id="contacts">
+
+				<div class="subHeader">
+					<h2 id="contactsHeaderTitle" class="nFont">Conversations</h2>
+					<button id="newChatButton" class="nFont allForms allButtons" onclick="processChatVisibility(event)">New Chat</button>
+				</div>
+
+				<div id="createNewChat">
+					<h2 id="createNewChatText" class="nFont darkBlue">Start a conversation</h2>
+					<form id="createNewChatForm" onsubmit="processNewChat(event)">
+						<input type="text" id="createNewChatInput" class="allForms nFont" placeholder="Type a username...">
+						<input type="submit" id="createNewChatButton" class="allForms nFont allButtons" value="Create Chat!">
+					</form>
+				</div>
+
+				<div id="contactsList"></div>
+
+			</div>
+
+			<div id="chat">
+
+				<div class="subHeader">
+					<h2 id="selectedInitials" class="nFont initials2"></h2>
+					<h2 id="selectedName" class="nFont contactName2"></h2>
+				</div>
+
+				<div id="textBox" class="texts nFont"></div>
+
+				<div class="submitText">
+					<form id="submitForm" onsubmit="processNewMessage(event)">
+						<input type="text" id="submittedText" class="allForms nFont" placeholder="Type something...">
+						<input type="submit" id="submittedTextButton" class="allForms nFont allButtons" value="&#x1f845">
+					</form>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+	</body>
+</html>
